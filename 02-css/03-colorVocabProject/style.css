@@ -1,0 +1,38 @@
+.color-title[id="red"] {
+  color: red;
+}
+.color-title[id="blue"] {
+  color: blue;
+}
+.color-title[id="orange"] {
+  color: orange;
+}
+.color-title[id="green"] {
+  color: green;
+}
+.color-title[id="yellow"] {
+  color: yellow;
+}
+/*
+We can also use just the id
+#red {
+  color: gray;
+}
+*/
+
+/* 
+Not a optimal solution because if the document had more h2 with an id they would also be changed. 
+
+h2[id] {
+  font-weight: normal;
+} */
+
+.color-title {
+  font-weight: normal;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
