@@ -1,0 +1,30 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+Remember that the image overflows the container because, at this point, no css reset is applied.
+*/
+
+body {
+  background-color: black;
+}
+
+.container {
+  text-align: center;
+
+  width: 50vw;
+  margin: 8rem auto;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 5px solid whitesmoke;
+}
