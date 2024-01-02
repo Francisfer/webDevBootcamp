@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Cascade</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>CSS Cascade</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <div id="outer-box" class="box">
-    <div class="box">
-      <p>Yellow Text</p>
-      <div class="box inner-box">
-        <p class="white-text">White Text</p>
+  <body>
+    <div id="outer-box" class="box">
+      <div class="box">
+        <p>Yellow Text</p>
+        <div class="box inner-box">
+          <p class="white-text">White Text</p>
+        </div>
+      </div>
+      <div class="box">
+        <p>Yellow Text</p>
+        <div class="box inner-box">
+          <p class="white-text">White Text</p>
+        </div>
       </div>
     </div>
-    <div class="box">
-      <p>Yellow Text</p>
-      <div class="box inner-box">
-        <p class="white-text">White Text</p>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
+
+<!-- 
+
+  Specificity - the element selector is the least specific, next is the class selector (more specific than the element selector), next come selecting elements based on attributes (most of the times, selecting an element based on an attribute overwrites the changes that we make with classes). 
+  Finally, the more specific selector is the id selector, this happens because, theoretically, we should only have one id to target a single element.
+
+  Type - We know that there are three different ways of applying css to a file: external stylesheet, internal css (style on the head) and the inline css.
+  In terms of the cascade, the most important are the styles that are applied inline (we use the style tag to only target one specific element of the page). Next comes the internal css because the internal stylesheet only exists inside of one webpage. Finally, the external stylesheet can be applied to many html files, as long as they are linked to that specific file that contains the styles.
+
+  Importance - The important !keyword can be used to apply any css rule
+ -->
