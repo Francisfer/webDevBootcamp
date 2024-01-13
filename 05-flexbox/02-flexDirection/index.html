@@ -12,8 +12,10 @@
       .container {
         color: white;
         border: 5px solid gold;
-        display: inline-flex;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 20px;
       }
 
       /*
@@ -22,7 +24,9 @@ children of the .container class.
     */
 
       .container > * {
-        flex-basis: 100px;
+        flex: 1;
+        text-align: center;
+        padding: 10px;
       }
 
       .red {
