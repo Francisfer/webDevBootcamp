@@ -2,18 +2,66 @@
 
 One of the most powerful features of bootstrap is the 12 column layout system.
 
-This layout system is made of three components, first we need a div with the class of container.
+This layout system is made of three components, first we need a div with the class of container. This will be the starting point.
 
 Inside of that container, we need another div, which is going to have the class row. It is inside of this row where we will have our items with the class of col, and they will be laid out using the column system.
 
-Basically, we have a container which has a row, inside of that row we add the columns that we want. For example lets say that for the first row we want a nav, we might want a column for the logo and a column for the nav.
+Basically, we have a container which has rows, inside of those rows, we add the columns that we want. For example, lets say that for the first row we want a nav, we might want a column for the logo and a column for the nav. 
 
 If we add a hero section, we add another row with just one column.
 
-When we have multiple columns inside of these rows, bootstrap will try to give every column equal spacing and space them across the entire width of the container.
+When we have multiple columns inside of these rows, bootstrap will try to give every column equal spacing and space them across the entire width of the container (default).
 
 So, as in the example, the first row will have 6 columns with one fr and the second row will have three columns with 1/3 of the space. 
 
-The bootstrap container is responsive
-  
+The bootstrap container is responsive, this means that, by defining a div with the class container, we are telling it to have a different size on different sized screens. We can also see the breakpoints that are used by default. 
+
+This is the same as saying that the container class already has predefined the min-width for each breakpoint.
+
+For example, on a screen with a width greater or equal to 992px (laptop), the container class will give the container a min-width of 960px.
+
+We can use the modifiers (.container-sm) to specify at which point we want the container to occupy 100% of the viewport. The container and the container-sm are the default, but the container-md means that, on small screens, the width of the container should be 100%.
+
+As we go further, we specify the width of 100% on progressively larger screens until we reach the container-fluid.
+
+The container fluid says that, on all screen sizes, we want the container to occupy 100% of the width of the viewport.
+
+The most frequent to be used are the default and the fluid ones. The container adds some margin to the left and right and the container fluid goes full bleed.
+
+_____________________________________________________________________________________
+
+The layout system also enables us to use sized columns. 
+
+This can be achieved by, instead of using the col class (which is set to make the columns to occupy the same space (width) inside of the row), using col-2 or col-10.
+
+To interpret these values, we must keep in mind that each row has 12 columns, so, if we split them up, we just specify how many of these columns we want the div to occupy.
+
+We can see the col-6 as 50%, so 6 in 12, the col-2 occupies 2 in 12, so 2/12 (or 1/6) and so on.
+
+_____________________________________________________________________________________
+
+RECAP – 
+
+1.	First, we approach the container. Here we choose if the container occupies the full width on all screens or if we want it to have a fixed width at a certain viewport width.
+ 
+  a.	If we want it to occupy the full width of the viewport we choose container-fluid. We must keep in mind that this container does not have a margin to the left and right and, also, it will not have a fixed width for the larger screens (if it is a very wide laptop screen or a tv, the container will always occupy the entire width).
+
+  b.	If we want this container to have a fixed width according to the viewport sizes, we choose one of the other classes. Imagine that we want the container to occupy the full width of the screen on all devices except tv’s, we would need to choose container-xxl because, when the screen is >= to 1400px, the container will have a fixed width of 1320px. 
+
+2.	Next, we address the columns, we already know that the col class is the same as having 1fr, so, with this class, all the columns will have the same space along the row, no matter the breakpoint that we are at. 
+
+  a.	If we want to size the columns, we can use col-2 or any other to establish the proportion of the screen that we want that column to occupy in relation to others, again, no matter the breakpoint that we are at. 
+
+  b.	However, as we have already seen in the projects, sometimes we want a column to occupy more or less space of the viewport according to the breakpoint (or according to the size of the viewport). 
+
+In this case, we need to be specific on how we want the columns to behave on certain viewport sizes. For this we use the same breakpoint references on the columns.
+
+For example, if we want a column to occupy two out of twelve on screens >= than 576px we say col-sm-2. We must understand that this behavior goes for this and all of the breakpoints above, because that is the rule >=.
+
+  c.	In a single div, or in a single column, we can have multiple breakpoints if we need.
+
+  d.	We can also mix and match, notice how in the first two columns of the first row we’ve defined a fixed width of 2 and 4 but in the third we make it responsive to occupy all the space that remains.
+
+  Remember col to be responsive and to apply sizing to all viewport’s col-10.
+
  -->
